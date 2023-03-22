@@ -1,0 +1,66 @@
+.assessbutton {
+	padding: 0px 0px 0px;
+	color: #a5a5a5;
+	line-height: 100rpx;
+	flex: 0 0 100rpx;
+	width: 100%;
+}
+
+.assessPrimarybutton {
+	padding: 0px 0px 0px;
+	color: #0000ff;
+	line-height: 100rpx;
+	flex: 0 0 100rpx;
+	width: 100%;
+}
+
+.assessbtnRight {
+	border: 2upx solid #eaeaea;
+	border-radius: 12upx;
+	margin-left: -1rpx;
+	margin-right: 10rpx;
+	padding: 0px 0px 0px;
+	color: #a5a5a5;
+	line-height: 100rpx;
+	flex: 0 0 100rpx;
+}
+
+.assessbtnLeft {
+	border: 2upx solid #eaeaea;
+	border-radius: 12upx;
+	margin-left: 10rpx;
+	margin-right: -1rpx;
+	padding: 0px 0px 0px;
+	color: #a5a5a5;
+	line-height: 100rpx;
+	flex: 0 0 100rpx;
+}
+
+.assess-unit-item__input {
+	text-align: left;
+	width: 100%;
+	font-size: 28upx;
+	margin: 4upx 16upx 0 4upx;
+	border: 2upx solid #eaeaea;
+	border-radius: 12upx;
+	min-height: 52.5upx;
+	line-height: 52.5upx;
+	height: 80rpx;
+}
+
+.assess-uni-pagination-box {}
+
+.assess-goods-carts {
+	/* #ifndef APP-NVUE */
+	display: flex;
+	/* #endif */
+	flex-direction: column;
+	position: fixed;
+	left: 0;
+	right: 0;
+	/* #ifdef H5 */
+	left: var(--window-left);
+	right: var(--window-right);
+	/* #endif */
+	bottom: 0;
+}

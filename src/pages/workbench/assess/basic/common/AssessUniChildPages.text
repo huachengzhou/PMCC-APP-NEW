@@ -1,0 +1,1145 @@
+,{
+		    "path" : "pages/workbench/assess/basic/common/basicEstateNetwork/basicEstateNetwork",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "通信网络信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicEstateNetwork/basicEstateNetworkEdit",
+	"style": {
+		"navigationBarTitleText": "通信网络信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyWater/basicEstateSupplyEstateSupplyWater",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "供水信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyWater/basicEstateSupplyEstateSupplyWaterEdit",
+	"style": {
+		"navigationBarTitleText": "供水信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicEstateSupplyEstateDrainWater/basicEstateSupplyEstateDrainWater",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "排水信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicEstateSupplyEstateDrainWater/basicEstateSupplyEstateDrainWaterEdit",
+	"style": {
+		"navigationBarTitleText": "排水信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyPower/basicEstateSupplyEstateSupplyPower",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "供电信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyPower/basicEstateSupplyEstateSupplyPowerEdit",
+	"style": {
+		"navigationBarTitleText": "供电信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyHeating/basicEstateSupplyEstateSupplyHeating",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "供热信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyHeating/basicEstateSupplyEstateSupplyHeatingEdit",
+	"style": {
+		"navigationBarTitleText": "供热信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyGas/basicEstateSupplyEstateSupplyGas",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "供气信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicEstateSupplyEstateSupplyGas/basicEstateSupplyEstateSupplyGasEdit",
+	"style": {
+		"navigationBarTitleText": "供气信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingEnvironment/basicMatchingEnvironment",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "环境因素信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingEnvironment/basicMatchingEnvironmentEdit",
+	"style": {
+		"navigationBarTitleText": "环境因素信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicEstateParking/basicEstateParking",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "停车场",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicEstateParking/basicEstateParkingEdit",
+	"style": {
+		"navigationBarTitleText": "停车场编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingTrafficTransit/basicMatchingTrafficTransit",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "公交信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingTrafficTransit/basicMatchingTrafficTransitEdit",
+	"style": {
+		"navigationBarTitleText": "公交信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingTrafficMetro/basicMatchingTrafficMetro",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "地铁信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingTrafficMetro/basicMatchingTrafficMetroEdit",
+	"style": {
+		"navigationBarTitleText": "地铁信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingTrafficTrafficHub/basicMatchingTrafficTrafficHub",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "交通枢纽信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingTrafficTrafficHub/basicMatchingTrafficTrafficHubEdit",
+	"style": {
+		"navigationBarTitleText": "交通枢纽信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingTrafficMainRoad/basicMatchingTrafficMainRoad",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "道路信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingTrafficMainRoad/basicMatchingTrafficMainRoadEdit",
+	"style": {
+		"navigationBarTitleText": "道路信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingTrafficMainConversion/basicMatchingTrafficMainConversion",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "主要转换互通桥信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingTrafficMainConversion/basicMatchingTrafficMainConversionEdit",
+	"style": {
+		"navigationBarTitleText": "主要转换互通桥信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingFinance/basicMatchingFinance",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "金融服务信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingFinance/basicMatchingFinanceEdit",
+	"style": {
+		"navigationBarTitleText": "金融服务信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingEducation/basicMatchingEducation",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "教育信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingEducation/basicMatchingEducationEdit",
+	"style": {
+		"navigationBarTitleText": "教育信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingMedical/basicMatchingMedical",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "医养条件信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingMedical/basicMatchingMedicalEdit",
+	"style": {
+		"navigationBarTitleText": "医养条件信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingMaterial/basicMatchingMaterial",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "原料供应及销售条件信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingMaterial/basicMatchingMaterialEdit",
+	"style": {
+		"navigationBarTitleText": "原料供应及销售条件信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingLeisurePlaceMatchingRecreation/basicMatchingLeisurePlaceMatchingRecreation",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "休闲娱乐信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingLeisurePlaceMatchingRecreation/basicMatchingLeisurePlaceMatchingRecreationEdit",
+	"style": {
+		"navigationBarTitleText": "休闲娱乐信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingLeisurePlaceMatchingRestaurant/basicMatchingLeisurePlaceMatchingRestaurant",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "餐饮信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingLeisurePlaceMatchingRestaurant/basicMatchingLeisurePlaceMatchingRestaurantEdit",
+	"style": {
+		"navigationBarTitleText": "餐饮信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingLeisurePlaceMatchingMarket/basicMatchingLeisurePlaceMatchingMarket",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "购物商场信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingLeisurePlaceMatchingMarket/basicMatchingLeisurePlaceMatchingMarketEdit",
+	"style": {
+		"navigationBarTitleText": "购物商场信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicBuildingFunction/basicBuildingFunction",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "建筑功能",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicBuildingFunction/basicBuildingFunctionEdit",
+	"style": {
+		"navigationBarTitleText": "建筑功能编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicBuildingOutfit/basicBuildingOutfit",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "楼栋外装",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicBuildingOutfit/basicBuildingOutfitEdit",
+	"style": {
+		"navigationBarTitleText": "楼栋外装编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicBuildingMaintenance/basicBuildingMaintenance",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "围护结构",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicBuildingMaintenance/basicBuildingMaintenanceEdit",
+	"style": {
+		"navigationBarTitleText": "围护结构编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicBuildingSurface/basicBuildingSurface",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "屋面结构",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicBuildingSurface/basicBuildingSurfaceEdit",
+	"style": {
+		"navigationBarTitleText": "屋面结构编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicBuildingPropertyServiceItem/basicBuildingPropertyServiceItem",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "物业服务",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicBuildingPropertyServiceItem/basicBuildingPropertyServiceItemEdit",
+	"style": {
+		"navigationBarTitleText": "物业服务编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicUnitCommonPart/basicUnitCommonPart",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "公共部分",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicUnitCommonPart/basicUnitCommonPartEdit",
+	"style": {
+		"navigationBarTitleText": "公共部分编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicUnitDecorate/basicUnitDecorate",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "装饰装修",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicUnitDecorate/basicUnitDecorateEdit",
+	"style": {
+		"navigationBarTitleText": "装饰装修编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicUnitElevator/basicUnitElevator",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "电梯信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicUnitElevator/basicUnitElevatorEdit",
+	"style": {
+		"navigationBarTitleText": "电梯信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicUnitHuxing/basicUnitHuxing",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "户型信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicUnitHuxing/basicUnitHuxingEdit",
+	"style": {
+		"navigationBarTitleText": "户型信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicUnitStairs/basicUnitStairs",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "楼梯信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicUnitStairs/basicUnitStairsEdit",
+	"style": {
+		"navigationBarTitleText": "楼梯信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseRoom/basicHouseRoom",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "房间",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseRoom/basicHouseRoomEdit",
+	"style": {
+		"navigationBarTitleText": "房间编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseRoomDecorate/basicHouseRoomDecorate",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "装修情况",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseRoomDecorate/basicHouseRoomDecorateEdit",
+	"style": {
+		"navigationBarTitleText": "装修情况编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseCorollaryEquipment/basicHouseCorollaryEquipment",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "房屋配套设备设施信息",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseCorollaryEquipment/basicHouseCorollaryEquipmentEdit",
+	"style": {
+		"navigationBarTitleText": "房屋配套设备设施信息编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseEquipmentHouseNewWind/basicHouseEquipmentHouseNewWind",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "新风情况",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseEquipmentHouseNewWind/basicHouseEquipmentHouseNewWindEdit",
+	"style": {
+		"navigationBarTitleText": "新风情况编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseEquipmentHouseAirConditioner/basicHouseEquipmentHouseAirConditioner",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "空调情况",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseEquipmentHouseAirConditioner/basicHouseEquipmentHouseAirConditionerEdit",
+	"style": {
+		"navigationBarTitleText": "空调情况编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseEquipmentHouseHeating/basicHouseEquipmentHouseHeating",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "供暖情况",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseEquipmentHouseHeating/basicHouseEquipmentHouseHeatingEdit",
+	"style": {
+		"navigationBarTitleText": "供暖情况编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseFaceStreet/basicHouseFaceStreet",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "临街（路）状况",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseFaceStreet/basicHouseFaceStreetEdit",
+	"style": {
+		"navigationBarTitleText": "临街（路）状况编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseHuxingPrice/basicHouseHuxingPrice",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "户型差异调查表",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseHuxingPrice/basicHouseHuxingPriceEdit",
+	"style": {
+		"navigationBarTitleText": "户型差异调查表编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseIntelligent/basicHouseIntelligent",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "电力通讯网络",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseIntelligent/basicHouseIntelligentEdit",
+	"style": {
+		"navigationBarTitleText": "电力通讯网络编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseTradingLease/basicHouseTradingLease",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "交易出租",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseTradingLease/basicHouseTradingLeaseEdit",
+	"style": {
+		"navigationBarTitleText": "交易出租编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseTradingSell/basicHouseTradingSell",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "交易出售",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseTradingSell/basicHouseTradingSellEdit",
+	"style": {
+		"navigationBarTitleText": "交易出售编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseWaterDrain/basicHouseWaterDrain",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "排水情况",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseWaterDrain/basicHouseWaterDrainEdit",
+	"style": {
+		"navigationBarTitleText": "排水情况编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicHouseWater/basicHouseWater",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "供水情况",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicHouseWater/basicHouseWaterEdit",
+	"style": {
+		"navigationBarTitleText": "供水情况编辑",
+		"enablePullDownRefresh": false
+	}
+
+},{
+		    "path" : "pages/workbench/assess/basic/common/basicMatchingEnvironmentHouse/basicMatchingEnvironmentHouse",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "临近的景观",
+		        "enablePullDownRefresh": false ,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue468",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px"
+						}]
+					}
+				}
+		    }
+		    
+		}
+
+,{
+	"path": "pages/workbench/assess/basic/common/basicMatchingEnvironmentHouse/basicMatchingEnvironmentHouseEdit",
+	"style": {
+		"navigationBarTitleText": "临近的景观编辑",
+		"enablePullDownRefresh": false
+	}
+
+}

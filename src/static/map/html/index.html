@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>高德地图</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #containerCpnMap {
+            width: 100%;
+            /* height: 100%; */
+            padding: 0px;
+            margin: 0px;
+            height: 400px;
+        }
+
+        .post-message-section {
+            visibility: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+        var userAgent = navigator.userAgent;
+        if (userAgent.indexOf('AlipayClient') > -1) {
+            // 支付宝小程序的 JS-SDK 防止 404 需要动态加载，如果不需要兼容支付宝小程序，则无需引用此 JS 文件。
+            document.writeln('<script src="https://appx/web-view.min.js"' + '>' + '<' + '/' + 'script>');
+        } else if (/QQ/i.test(userAgent) && /miniProgram/i.test(userAgent)) {
+            // QQ 小程序
+            document.write(
+                '<script type="text/javascript" src="https://qqq.gtimg.cn/miniprogram/webview_jssdk/qqjssdk-1.0.0.js"><\/script>'
+            );
+        } else if (/miniProgram/i.test(userAgent) && /micromessenger/i.test(userAgent)) {
+            // 微信小程序 JS-SDK 如果不需要兼容微信小程序，则无需引用此 JS 文件。
+            document.write('<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"><\/script>');
+        } else if (/toutiaomicroapp/i.test(userAgent)) {
+            // 头条小程序 JS-SDK 如果不需要兼容头条小程序，则无需引用此 JS 文件。
+            document.write(
+                '<script type="text/javascript" src="https://s3.pstatp.com/toutiao/tmajssdk/jssdk-1.0.1.js"><\/script>');
+        } else if (/swan/i.test(userAgent)) {
+            // 百度小程序 JS-SDK 如果不需要兼容百度小程序，则无需引用此 JS 文件。
+            document.write(
+                '<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.18.js"><\/script>'
+            );
+        } else if (/quickapp/i.test(userAgent)) {
+            // quickapp
+            document.write('<script type="text/javascript" src="https://quickapp/jssdk.webview.min.js"><\/script>');
+        }
+        // if (!/toutiaomicroapp/i.test(userAgent)) {
+        //     document.querySelector('.post-message-section').style.visibility = 'visible';
+        // }
+    </script>
+    <!-- uni 的 SDK -->
+    <!-- 需要把 uni.webview.1.5.4.js 下载到自己的服务器 -->
+    <script type="text/javascript" src="https://unpkg.com/@dcloudio/uni-webview-js@0.0.3/index.js"></script>
+
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.15&key=5aa8a1f87706e937a53d99b59a4e574a&plugin=AMap.Autocomplete,AMap.ToolBar,AMap.PlaceSearch,AMap.MouseTool,AMap.RectangleEditor,AMap.CitySearch">
+    </script>
+    <script src="https//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+</head>
+<body>
+<div>
+    <div>
+        <input name="name" id="tipinput" class=" form-control input-full" placeholder="搜索"/>
+    </div>
+
+    <div id="containerCpnMap"></div>
+
+    <div class="post-message-section">
+
+    </div>
+
+
+    <div class="row" style="margin-top:20px;display: none;" tab-role="drawPolygon">
+        <div class="col-3 ">
+
+        </div>
+
+        <div class="col-3 " tab-role="findMap">
+            <button class="btn btn-primary btn-sm" type="button"
+                    onclick="toolObjectMap.handleMouseTool(this) ;">
+                绘图关
+            </button>
+        </div>
+
+        <div class="col-3 " tab-role="findMap">
+            <button style="margin-left: 5px" class="btn btn-danger btn-sm" type="button"
+                    onclick="toolObjectMap.clearMap() ;">
+                清除
+            </button>
+        </div>
+
+        <div class="col-3 ">
+
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript">
+    var toolObjectMap = {};
+
+
+    toolObjectMap.config = {
+        mapEle: 'containerCpnMap',
+        uni: null,
+        longitude: '',
+        latitude: '',
+        cityName: '',
+        // iconLocal:'/static/map/html/img/poi-marker-default.png',
+        iconLocal: 'http://a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png',
+        mapConfig: {
+            fillColor: '#00b0ff', //多边形填充颜色，使用16进制颜色代码赋值，如：#00B2D5
+            fillOpacity: '0.3', //多边形填充透明度，取值范围 [0,1] ，0表示完全透明，1表示不透明。默认为0.5
+            strokeWeight: '2', //轮廓线宽度
+            strokeColor: '#80d8ff' //线条颜色，使用16进制颜色代码赋值。默认值为#006600
+        },
+        mouseTool: null
+    };
+
+
+    /**
+     * 非常重要获取uniapp 的全局变量
+     */
+    document.addEventListener('UniAppJSBridgeReady', function () {
+        console.log('UniAppJSBridgeReady') ;
+        console.log('uni',uni) ;
+        toolObjectMap.config.uni = uni;
+        uni.webView.getEnv(function(res) {
+            console.log('当前环境：' + JSON.stringify(res));
+        });
+    });
+
+    //目前uniapp没有向uniapp web-view 传递参数的方法 所以都是通过子页面url传递值
+    toolObjectMap.getUrlQueryObj = function () {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    };
+
+
+    //向父页面传递绘图数据
+    toolObjectMap.postPolygonMessage = function () {
+        var that = this;
+        var map = toolObjectMap.config.map;
+        var center = map.getCenter();
+        var list = this.getFormData();
+        var longitude = center.getLng(),
+            latitude = center.getLat();
+        var messageName = 'mapMessagePolygon';
+        var objData = {
+            lat: latitude,
+            latitude: latitude,
+            longitude: longitude,
+            lng: longitude,
+            list: list
+        };
+        var UNI_RUN = this.config.uni;
+        console.log("objData:" + JSON.stringify(objData));
+        //向uniapp传值
+        // 待触发 `UniAppJSBridgeReady` 事件后，即可调用 uni 的 API。
+        if (UNI_RUN) {
+            UNI_RUN.postMessage({
+                data: {
+                    action: messageName,
+                    data: objData
+                }
+            });
+            UNI_RUN.getEnv(function (res) {
+                console.log('当前环境：' + JSON.stringify(res));
+            });
+        } else {
+            var t1 = setTimeout(function () {
+                UNI_RUN = that.config.uni;
+                UNI_RUN.postMessage({
+                    data: {
+                        action: messageName,
+                        data: objData
+                    }
+                });
+                UNI_RUN.getEnv(function (res) {
+                    console.log('当前环境：' + JSON.stringify(res));
+                });
+            }, 1600);
+        }
+    };
+
+    //向父页面传递数据
+    toolObjectMap.postLnglatMessage = function (longitude, latitude) {
+        var that = this;
+        var messageName = 'mapMessageLngLat';
+        var objLngLat = {
+            lat: latitude,
+            latitude: latitude,
+            longitude: longitude,
+            lng: longitude
+        };
+        var UNI_RUN = this.config.uni;
+        console.log("objLngLat:" + JSON.stringify(objLngLat));
+        console.log(UNI_RUN) ;
+        //向uniapp传值
+        // 待触发 `UniAppJSBridgeReady` 事件后，即可调用 uni 的 API。
+        if (UNI_RUN) {
+            UNI_RUN.postMessage({
+                data: {
+                    action: messageName,
+                    data: objLngLat
+                }
+            });
+            UNI_RUN.getEnv(function (res) {
+                console.log('当前环境：' + JSON.stringify(res));
+            });
+        } else {
+            var t1 = setTimeout(function () {
+                UNI_RUN = that.config.uni;
+                UNI_RUN.postMessage({
+                    data: {
+                        action: messageName,
+                        data: objLngLat
+                    }
+                });
+                UNI_RUN.getEnv(function (res) {
+                    console.log('当前环境：' + JSON.stringify(res));
+                });
+            }, 1600);
+        }
+    };
+
+    //获取定位
+    toolObjectMap.getUniLocation = function (callback) {
+        var UNI_RUN = this.config.uni;
+        //定义一个信号量机制变量
+        let flagCount = 0;
+        UNI_RUN.getLocation({
+            type: 'gcj02',
+            // altitude :true,
+            geocode: true, //返回可以用于uni.openLocation的经纬度
+            success: function (res) {
+                if (flagCount == 0) {
+                    callback(res);
+                    flagCount++;
+                }
+            }
+        });
+        try {
+            wx.getLocation({
+                type: "gcj02",
+                success: function (res) {
+                    if (flagCount == 0) {
+                        callback(res);
+                        flagCount++;
+                    }
+                }
+            });
+        } catch (e) {
+            //TODO handle the exception
+        }
+    };
+
+    //加载地图
+    toolObjectMap.loadMap = function () {
+        var that = this;
+        var mapOption = {
+            resizeEnable: true, //是否监控地图容器尺寸变化
+            rotateEnable: true,
+            zoom: 15, //初始地图级别
+            viewMode: "2D"
+        };
+        var parentQuery = this.getUrlQueryObj();
+        var iconLocal = this.config.iconLocal;
+        var map = null;
+        if (that.config.longitude && that.config.latitude) {
+            mapOption.center = [that.config.longitude, that.config.latitude];
+            map = new AMap.Map(that.config.mapEle, mapOption);
+        } else {
+            mapOption.center = [104.075701, 30.660987];//成都中心坐标
+            map = new AMap.Map(that.config.mapEle, mapOption);
+        }
+        this.config.map = map;
+
+
+        //地图点击事件
+        map.on('click', function (e) {
+            if (parentQuery.findMap == 'n' || parentQuery.findMap == 'N') {
+                if (parentQuery.addMarker == 'y' || parentQuery.addMarker == 'Y') {
+                    map.clearMap(); // 使用clearMap方法删除所有覆盖物
+                    var lnglat = e.lnglat;
+                    console.log(e) ;
+                    if (lnglat) {
+                        var marker = new AMap.Marker({
+                            position: [lnglat.lng, lnglat.lat],
+                            map: map,
+                            icon: iconLocal,
+                            offset: new AMap.Pixel(-13, -30)
+                        });
+                        that.postLnglatMessage(lnglat.lng, lnglat.lat);
+                        that.config.longitude = lnglat.lng;
+                        that.config.latitude = lnglat.lat;
+                        map.panTo([lnglat.lng, lnglat.lat]);
+                    }
+                }
+            }
+        });
+        //加载完成要做的事情
+        map.on("complete", function () {
+            try {
+                map.setFitView(); //自适应到覆盖物
+            } catch (e) {
+                console.log(e);
+            }
+            console.log('load map success !');
+            //输入提示
+            var autoOptions = {
+                input: 'tipinput'
+            };
+            var auto = new AMap.Autocomplete(autoOptions);
+            //注册监听，当选中某条记录时会触发
+            auto.on("select", function (e) {
+                var poi = e.poi;
+                var tempLocation = poi.location;
+                if (tempLocation) {
+                    map.setCenter([tempLocation.lng, tempLocation.lat]);
+                } else if (poi.id) {
+                    var placeSearch = new AMap.PlaceSearch();
+                    placeSearch.getDetails(poi.id, function (status, result) {
+                        // 查询成功时，result即为对应的POI详情
+                        if (result.info == 'OK') {
+                            if (result.poiList.pois.length > 0) {
+                                var poiX = result.poiList.pois[0];
+                                map.setCenter([poiX.location.lng, poiX.location.lat]); //设置地图中心点
+                            }
+                        }
+                    });
+                } else {
+                    if (e.poi.district) {
+                        that.autoCompleteSearch(e.poi.district + '' + e.poi.name,
+                            function (bisFlag) {
+                                if (!bisFlag) {
+                                    that.autoCompleteSearch(e.poi.name);
+                                }
+                            });
+                    } else {
+                        that.autoCompleteSearch(e.poi.name);
+                    }
+                }
+            });
+
+
+            // AMap.plugin(['AMap.PlaceSearch','AMap.AutoComplete'], function(){
+            //     // var auto = new AMap.AutoComplete(autoOptions);
+            //     //构造地点查询类
+            //     var placeSearch = new AMap.PlaceSearch({
+            //         map: map
+            //     });
+            //     //注册监听，当选中某条记录时会触发
+            //     auto.on("select", function (e) {
+            //        console.log(e) ;
+            //     });
+            // });
+
+            that.completeEvent();
+            //执行两次
+            // that.showServerMapData();
+            setTimeout(function () {
+                that.showServerMapData();
+            }, 200);
+        });
+
+    };
+
+    /**
+     * 搜索控件
+     */
+    toolObjectMap.autoCompleteSearch = function (name, callback) {
+        var placeSearch = new AMap.PlaceSearch({});
+        placeSearch.search(name, function (status, result) {
+            if (result.info == 'OK') {
+                if (result.poiList.pois.length > 0) {
+                    var poi = result.poiList.pois[0];
+                    toolObjectMap.config.map.setCenter([poi.location.lng, poi.location.lat]); //设置地图中心点
+                    if (callback) {
+                        callback(true);
+                    }
+                } else {
+                    var citySearch = new AMap.CitySearch();
+                    citySearch.getLocalCity(function (status, result) {
+                        if (status === 'complete' && result.info === 'OK') {
+                            var bounds = result.bounds;
+                            toolObjectMap.config.map.setCenter(bounds); //设置地图中心点
+                            if (callback) {
+                                callback(false);
+                            }
+                        }
+                    });
+                }
+            } else {
+                if (callback) {
+                    callback(false);
+                }
+            }
+        });
+    };
+
+    //加载服务端数据
+    toolObjectMap.showServerMapData = function () {
+        var parentQuery = this.getUrlQueryObj();
+        var iconLocal = this.config.iconLocal;
+        var map = this.config.map;
+        var that = this;
+        //加载  覆盖物
+        if (parentQuery.polygonList) {
+            try {
+                var jsonArray = JSON.parse(parentQuery.polygonList);
+                this.createOverlay(jsonArray);
+            } catch (e) {
+            }
+        } else {
+            //加载定位
+            // that.geolocation();
+        }
+        if(parentQuery.center){
+            if (parentQuery.longitude && parentQuery.latitude){
+                if (parentQuery.addMarker) {
+                    new AMap.Marker({
+                        position: [parentQuery.longitude, parentQuery.latitude],
+                        map: map,
+                        icon: iconLocal,
+                        offset: new AMap.Pixel(-13, -30)
+                    });
+                }
+            }
+            var center = JSON.parse(parentQuery.center) ;
+            map.setCenter(center); //设置地图中心点
+        }else if (parentQuery.longitude && parentQuery.latitude){
+            if (parentQuery.addMarker) {
+                new AMap.Marker({
+                    position: [parentQuery.longitude, parentQuery.latitude],
+                    map: map,
+                    icon: iconLocal,
+                    offset: new AMap.Pixel(-13, -30)
+                });
+            }
+            map.setCenter([parentQuery.longitude, parentQuery.latitude]); //设置地图中心点
+            console.log('parentQuery:' + JSON.stringify(parentQuery));
+            console.log(parentQuery);
+        }
+
+    };
+
+
+    /**
+     * 浏览器定位
+     */
+    toolObjectMap.geolocation = function () {
+        toolObjectMap.config.map.plugin('AMap.Geolocation', function () {
+            var geolocation = new AMap.Geolocation({
+                enableHighAccuracy: true, //是否使用高精度定位，默认:true
+                timeout: 10000, //超过10秒后停止定位，默认：无穷大
+                maximumAge: 0, //定位结果缓存0毫秒，默认：0
+                convert: true, //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
+                showButton: true, //显示定位按钮，默认：true
+                buttonPosition: 'LB', //定位按钮停靠位置，默认：'LB'，左下角
+                buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+                showMarker: false, //定位成功后在定位到的位置显示点标记，默认：true
+                showCircle: true, //定位成功后用圆圈表示定位精度范围，默认：true
+                panToLocation: true, //定位成功后将定位到的位置作为地图中心点，默认：true
+                zoomToAccuracy: true //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+            });
+            toolObjectMap.config.map.addControl(geolocation);
+
+            geolocation.getCurrentPosition(function (status, result) {
+                if (status == 'complete') {
+                    console.log(result);
+                } else {
+                    console.log(result);
+                }
+            });
+        });
+    };
+
+    /**
+     * 地图加载完成后要做的事
+     */
+    toolObjectMap.completeEvent = function () {
+        var that = this;
+        var parentQuery = this.getUrlQueryObj();
+        var cityName = this.config.cityName;
+        if (cityName) {
+            if (cityName.search("市") == -1) {
+                cityName = cityName + "市";
+            }
+        }
+        var map = toolObjectMap.config.map;
+        if (cityName) {
+            map.setCity(cityName);
+        }
+        if (parentQuery.drawPolygon == 'y' || parentQuery.drawPolygon == 'Y') {
+            if (parentQuery.findMap == 'n' || parentQuery.findMap == 'N') {
+                this.config.mouseTool = new AMap.MouseTool(map);
+                this.config.mouseTool.polygon({
+                    fillColor: toolObjectMap.config.mapConfig.fillColor,
+                    strokeWeight: toolObjectMap.config.mapConfig.fillOpacity,
+                    strokeColor: toolObjectMap.config.mapConfig.strokeWeight,
+                    fillOpacity: toolObjectMap.config.mapConfig.strokeColor
+                });
+                //添加事件
+                AMap.event.addListener(that.config.mouseTool, 'draw', function (e) {
+                });
+            }
+        }
+    };
+
+    /**
+     * 清除覆盖物
+     */
+    toolObjectMap.clearMap = function () {
+        var map = toolObjectMap.config.map;
+        map.clearMap(); // 使用clearMap方法删除所有覆盖物
+    };
+
+    //绘图开关
+    toolObjectMap.handleMouseTool = function (_this) {
+        var map = toolObjectMap.config.map;
+        var polygons = map.getAllOverlays('polygon');
+        var mouseTool = this.config.mouseTool;
+        var text = $(_this).text();
+        text = $.trim(text);
+        if (text == '绘图关') {
+            if (mouseTool) {
+                mouseTool.close(true); //关闭
+                this.config.mouseTool = undefined;
+            }
+            $(_this).text('绘图开');
+            // this.clearMap();
+            var list = [];
+            $.each(polygons, function (k, polygon) {
+                var path = [];
+                $.each(polygon.getPath(), function (i, item) {
+                    path.push([item.lng, item.lat]);
+                });
+                var obj = {
+                    path: path,
+                    extData: polygon.getExtData(),
+                    fillColor: polygon.getOptions()
+                };
+                list.push(obj);
+            });
+            this.createOverlay(list);
+            this.postPolygonMessage();
+        } else if (text == '绘图开') {
+            if (!mouseTool) {
+                this.completeEvent();
+            }
+            $(_this).text('绘图关');
+        }
+    };
+
+    /**
+     * 创建覆盖物
+     */
+    toolObjectMap.createOverlay = function (data) {
+        var map = toolObjectMap.config.map;
+        if (!$.isArray(data)) {
+            return false;
+        }
+        $.each(data, function (i, item) {
+            var polygon = new AMap.Polygon({
+                path: item.path,
+                map: map,
+                fillColor: toolObjectMap.config.mapConfig.fillColor,
+                strokeWeight: toolObjectMap.config.mapConfig.fillOpacity,
+                strokeColor: toolObjectMap.config.mapConfig.strokeWeight,
+                fillOpacity: toolObjectMap.config.mapConfig.strokeColor
+            });
+            try {
+                map.setFitView(); //自适应到覆盖物
+            } catch (e) {
+                console.log(e);
+            }
+        });
+    };
+
+    /**
+     * 收集数据
+     */
+    toolObjectMap.getFormData = function () {
+        var map = this.config.map;
+        var polygon = map.getAllOverlays('polygon');
+        var jsonData = [];
+        if (polygon.length != 0) {
+            $.each(polygon, function (i, overlay) {
+                var path = [];
+                $.each(overlay.getPath(), function (i, item) {
+                    path.push([item.lng, item.lat]);
+                });
+                var attributeData = overlay.getOptions();
+                var obj = {
+                    path: path,
+                    extData: overlay.getExtData(),
+                    fillColor: attributeData.fillColor
+                };
+                jsonData.push(obj);
+            });
+        }
+        return jsonData;
+    };
+
+
+    /**
+     * 去除重复
+     * @param arr
+     * @returns {*}
+     */
+    toolObjectMap.unique = function (arr) {
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i]._amap_id == arr[j]._amap_id) {
+                    //如果第一个等于第二个，splice方法删除第二个
+                    arr.splice(j, 1);
+                    j--;
+                }
+            }
+        }
+        return arr;
+    };
+
+
+    //浏览器 载入基本完成 从这里开始入口
+    window.onload = function () {
+        var parentQuery = toolObjectMap.getUrlQueryObj();
+        toolObjectMap.loadMap();
+
+        //处理  窗体宽度和高度问题
+        var data = {
+            clientWidth: document.body.clientWidth, //网页可见区域宽(body)
+            clientHeight: document.body.clientHeight, //网页可见区域高(body)
+            offsetWidth: document.body.offsetWidth, //网页可见区域宽(body)，包括border、margin等
+            offsetHeight: document.body.offsetHeight, //网页可见区域宽(body)，包括border、margin等
+            scrollWidth: document.body.scrollWidth, //网页正文全文宽，包括有滚动条时的未见区域
+            scrollHeight: document.body.scrollHeight, //网页正文全文高，包括有滚动条时的未见区域
+            scrollTop: document.body.scrollTop, //网页被卷去的Top(滚动条)
+            scrollLeft: document.body.scrollLeft, //网页被卷去的Left(滚动条)
+            screenTop: document.screenTop, // 浏览器距离Top
+            screenLeft: document.screenLeft, //浏览器距离Left
+            height: window.screen.height, //屏幕分辨率的高
+            width: window.screen.width, //屏幕分辨率的宽
+            availHeight: window.screen.availHeight, //屏幕可用工作区的高
+            availWidth: window.screen.availWidth, //屏幕可用工作区的宽
+        };
+        let width = data.width - data.width / 5;
+        let height = data.height * (3.8 / 5);
+        var element = document.getElementById(toolObjectMap.config.mapEle);
+        element.style.height = height + "px";
+
+        //找到任何元素包含  属性tab-role的集合
+        $(document).find("[tab-role]").each(function (i, ele) {
+            var target = $(ele);
+            var role = target.attr("tab-role");
+            //相同的角色显示  而不相同的则隐藏
+            if (role.indexOf('drawPolygon') != -1) {
+                if (parentQuery.drawPolygon == 'n' || parentQuery.drawPolygon == 'N') {
+                    target.hide();
+                } else {
+                    target.show();
+                }
+            }
+            if (role.indexOf('addMarker') != -1) {
+                if (parentQuery.addMarker == 'n' || parentQuery.addMarker == 'N') {
+                    target.hide();
+                } else {
+                    target.show();
+                }
+            }
+            if (role.indexOf('findMap') != -1) {
+                if (parentQuery.findMap == 'y' || parentQuery.findMap == 'Y') {
+                    target.hide();
+                } else {
+                    target.show();
+                }
+            }
+
+            // AMap.plugin('AMap.PlaceSearch', function () {
+            //     var placeSearch = new AMap.PlaceSearch();
+            //     // 中国国家博物馆对应的POI ID
+            //     var poiid = 'B000A83U0P';
+            //
+            //     placeSearch.getDetails(poiid, function (status, result) {
+            //         // 查询成功时，result即为对应的POI详情
+            //         console.log(result);
+            //     })
+            // })
+        });
+    };
+</script>
+</body>
+
+
+</html>

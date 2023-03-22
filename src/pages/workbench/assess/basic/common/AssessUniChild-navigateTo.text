@@ -1,0 +1,309 @@
+
+
+case "basicEstateNetwork" :{
+	uni.navigateTo({
+		url : "../common/basicEstateNetwork/basicEstateNetwork" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicEstateSupplyEstateSupplyWater" :{
+	uni.navigateTo({
+		url : "../common/basicEstateSupplyEstateSupplyWater/basicEstateSupplyEstateSupplyWater" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicEstateSupplyEstateDrainWater" :{
+	uni.navigateTo({
+		url : "../common/basicEstateSupplyEstateDrainWater/basicEstateSupplyEstateDrainWater" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicEstateSupplyEstateSupplyPower" :{
+	uni.navigateTo({
+		url : "../common/basicEstateSupplyEstateSupplyPower/basicEstateSupplyEstateSupplyPower" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicEstateSupplyEstateSupplyHeating" :{
+	uni.navigateTo({
+		url : "../common/basicEstateSupplyEstateSupplyHeating/basicEstateSupplyEstateSupplyHeating" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicEstateSupplyEstateSupplyGas" :{
+	uni.navigateTo({
+		url : "../common/basicEstateSupplyEstateSupplyGas/basicEstateSupplyEstateSupplyGas" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingEnvironment" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingEnvironment/basicMatchingEnvironment" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicEstateParking" :{
+	uni.navigateTo({
+		url : "../common/basicEstateParking/basicEstateParking" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingTrafficTransit" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingTrafficTransit/basicMatchingTrafficTransit" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingTrafficMetro" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingTrafficMetro/basicMatchingTrafficMetro" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingTrafficTrafficHub" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingTrafficTrafficHub/basicMatchingTrafficTrafficHub" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingTrafficMainRoad" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingTrafficMainRoad/basicMatchingTrafficMainRoad" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingTrafficMainConversion" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingTrafficMainConversion/basicMatchingTrafficMainConversion" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingFinance" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingFinance/basicMatchingFinance" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingEducation" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingEducation/basicMatchingEducation" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingMedical" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingMedical/basicMatchingMedical" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingMaterial" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingMaterial/basicMatchingMaterial" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingLeisurePlaceMatchingRecreation" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingLeisurePlaceMatchingRecreation/basicMatchingLeisurePlaceMatchingRecreation" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingLeisurePlaceMatchingRestaurant" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingLeisurePlaceMatchingRestaurant/basicMatchingLeisurePlaceMatchingRestaurant" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingLeisurePlaceMatchingMarket" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingLeisurePlaceMatchingMarket/basicMatchingLeisurePlaceMatchingMarket" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicBuildingFunction" :{
+	uni.navigateTo({
+		url : "../common/basicBuildingFunction/basicBuildingFunction" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicBuildingOutfit" :{
+	uni.navigateTo({
+		url : "../common/basicBuildingOutfit/basicBuildingOutfit" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicBuildingMaintenance" :{
+	uni.navigateTo({
+		url : "../common/basicBuildingMaintenance/basicBuildingMaintenance" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicBuildingSurface" :{
+	uni.navigateTo({
+		url : "../common/basicBuildingSurface/basicBuildingSurface" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicBuildingPropertyServiceItem" :{
+	uni.navigateTo({
+		url : "../common/basicBuildingPropertyServiceItem/basicBuildingPropertyServiceItem" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicUnitCommonPart" :{
+	uni.navigateTo({
+		url : "../common/basicUnitCommonPart/basicUnitCommonPart" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicUnitDecorate" :{
+	uni.navigateTo({
+		url : "../common/basicUnitDecorate/basicUnitDecorate" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicUnitElevator" :{
+	uni.navigateTo({
+		url : "../common/basicUnitElevator/basicUnitElevator" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicUnitHuxing" :{
+	uni.navigateTo({
+		url : "../common/basicUnitHuxing/basicUnitHuxing" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicUnitStairs" :{
+	uni.navigateTo({
+		url : "../common/basicUnitStairs/basicUnitStairs" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseRoom" :{
+	uni.navigateTo({
+		url : "../common/basicHouseRoom/basicHouseRoom" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseRoomDecorate" :{
+	uni.navigateTo({
+		url : "../common/basicHouseRoomDecorate/basicHouseRoomDecorate" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseCorollaryEquipment" :{
+	uni.navigateTo({
+		url : "../common/basicHouseCorollaryEquipment/basicHouseCorollaryEquipment" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseEquipmentHouseNewWind" :{
+	uni.navigateTo({
+		url : "../common/basicHouseEquipmentHouseNewWind/basicHouseEquipmentHouseNewWind" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseEquipmentHouseAirConditioner" :{
+	uni.navigateTo({
+		url : "../common/basicHouseEquipmentHouseAirConditioner/basicHouseEquipmentHouseAirConditioner" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseEquipmentHouseHeating" :{
+	uni.navigateTo({
+		url : "../common/basicHouseEquipmentHouseHeating/basicHouseEquipmentHouseHeating" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseFaceStreet" :{
+	uni.navigateTo({
+		url : "../common/basicHouseFaceStreet/basicHouseFaceStreet" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseHuxingPrice" :{
+	uni.navigateTo({
+		url : "../common/basicHouseHuxingPrice/basicHouseHuxingPrice" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseIntelligent" :{
+	uni.navigateTo({
+		url : "../common/basicHouseIntelligent/basicHouseIntelligent" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseTradingLease" :{
+	uni.navigateTo({
+		url : "../common/basicHouseTradingLease/basicHouseTradingLease" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseTradingSell" :{
+	uni.navigateTo({
+		url : "../common/basicHouseTradingSell/basicHouseTradingSell" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseWaterDrain" :{
+	uni.navigateTo({
+		url : "../common/basicHouseWaterDrain/basicHouseWaterDrain" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicHouseWater" :{
+	uni.navigateTo({
+		url : "../common/basicHouseWater/basicHouseWater" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}
+
+case "basicMatchingEnvironmentHouse" :{
+	uni.navigateTo({
+		url : "../common/basicMatchingEnvironmentHouse/basicMatchingEnvironmentHouse" + "?" + utils.parseParam(param)
+	}) ;
+	break ;
+}

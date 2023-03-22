@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4539903",
+      "name": "计算",
+      "font_class": "jisuan",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "13905867",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "14997308",
+      "name": "保存",
+      "font_class": "baocun",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "17606364",
+      "name": "文件搜索",
+      "font_class": "wenjiansousuo",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "18386856",
+      "name": "保存",
+      "font_class": "baocun1",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    }
+  ]
+}
